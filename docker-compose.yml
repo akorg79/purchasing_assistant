@@ -1,0 +1,9 @@
+services:
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: test
+    volumes:
+      - .:/app
+    command: ["bash", "-c", " python -m app.main"]
